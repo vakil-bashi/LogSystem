@@ -2,7 +2,7 @@ package app
 
 import (
 	"github.com/gin-gonic/gin"
-	"gorm.io/gorm/logger"
+	"github.com/vakil-bashi/log-system/logger"
 )
 
 var (
