@@ -2,6 +2,7 @@ package app
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/vakil-bashi/log-system/controllers/logs"
 	"github.com/vakil-bashi/log-system/controllers/ping"
 )
 
@@ -24,4 +25,5 @@ func CORSMiddleware() gin.HandlerFunc {
 func urlPatterns() {
 	router.GET("/ping", ping.Ping)
 
+	router.POST("/logs/insert", logs.InsertLogs)
 }

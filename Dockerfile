@@ -1,5 +1,5 @@
 FROM golang:1.20
-EXPOSE 9091
+EXPOSE 9092
 
 WORKDIR /prj
 

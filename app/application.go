@@ -12,7 +12,7 @@ var (
 func StartApplication() {
 	router.Use(CORSMiddleware())
 	urlPatterns()
-	logger.Info("about to start the vakilbashi-API v-0.0.1")
+	logger.Info("about to start the vakilbashi-logs-API v-0.0.1")
 
-	router.Run(":9091")
+	router.Run(":9092")
 }
