@@ -14,7 +14,7 @@ func InsertLogs(c *gin.Context) {
 
 	apiKey := c.GetHeader("X-API-Key")
 
-	if apiKey == "" || apiKey == "wzw0ReNLnrOnPSvpG4i1UT7hKTitSYnb3F8BjM0mS6UU7YH6QjqczD3MJhsp7HI44VmuETG9b1Na0S3LZCFtRtvFvt2vvGajLYRCqNShm7nluZD62o4LxmBaRZHukLLL" {
+	if apiKey == "" || apiKey != "wzw0ReNLnrOnPSvpG4i1UT7hKTitSYnb3F8BjM0mS6UU7YH6QjqczD3MJhsp7HI44VmuETG9b1Na0S3LZCFtRtvFvt2vvGajLYRCqNShm7nluZD62o4LxmBaRZHukLLL" {
 		logger.Error("request is Unauthorized", errors.New("api-key is not valid"))
 		restError := responses.NewBadRequestError("API-Key is not Valid", "please makes sure to send correct api-key.", http.StatusBadRequest)
 		c.JSON(http.StatusBadRequest, restError)
